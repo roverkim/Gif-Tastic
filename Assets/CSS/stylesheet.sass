@@ -1,0 +1,70 @@
+
+//Mixins
+////Grid
+@mixin grid ($columns, $rows, $area)
+  grid-template-columns: $columns
+  grid-template-rows: $rows
+  grid-template-areas: $area
+
+////Center Horizontally and Vertically Using grid
+@mixin grid_Vertical_Horizontal_Center
+  justify-self: center
+  align-self: center
+
+////Center Horizontally and Vertically Using Css transform
+@mixin normal_Vertical_Horizontal_Center
+  // Remember to declare parent as postion: relative
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin view_Height_Width
+  height: 100vh
+  width: 100vw
+
+
+// Main CSS
+// Frame around images
+.celeb_Border
+  border: 1px dashed black 
+
+
+body
+  display: grid
+  @include grid($columns: 0.1px 1fr 0.1px, $rows: 0.1px 1fr 0.1px , $area: ". . . " ". main ." ". . .")
+  grid-column-gap: 10px
+  grid-row-gap: 50px
+  height: 100vh
+  width: 100vw
+  background: url("../Images/background.gif")
+  background-repeat: no-repeat
+  background-size: cover
+  .main
+    grid-area: main
+    display: grid
+    @include grid($columns: 1fr , $rows: 1fr 1fr 5fr, $area: "button_Row" "user_Input" "content_GIFS" )
+    border: 1px solid white
+    height: 100%
+    width: 100%
+    .button_Row
+      grid-area: button_Row
+      border: 1px solid black
+      display: grid
+      .center_Button
+        @include grid_Vertical_Horizontal_Center
+        width: auto
+        height: auto
+
+    .user_Input
+      grid-area: user_Input
+      border: 1px solid black
+      display: grid
+      .form
+        @include grid_Vertical_Horizontal_Center
+        width: auto
+        height: auto
+
+    .content_GIFS
+      grid-area: content_GIFS
+      border: 1px solid black

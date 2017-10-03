@@ -1,0 +1,45 @@
+.celeb_Border {
+  border: 1px dashed black; }
+
+body {
+  display: grid;
+  grid-template-columns: 0.1px 1fr 0.1px;
+  grid-template-rows: 0.1px 1fr 0.1px;
+  grid-template-areas: ". . . " ". main ." ". . .";
+  grid-column-gap: 10px;
+  grid-row-gap: 50px;
+  height: 100vh;
+  width: 100vw;
+  background: url("../Images/background.gif");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  body .main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-areas: "button_Row" "user_Input" "content_GIFS";
+    border: 1px solid white;
+    height: 100%;
+    width: 100%; }
+    body .main .button_Row {
+      grid-area: button_Row;
+      border: 1px solid black;
+      display: grid; }
+      body .main .button_Row .center_Button {
+        justify-self: center;
+        align-self: center;
+        width: auto;
+        height: auto; }
+    body .main .user_Input {
+      grid-area: user_Input;
+      border: 1px solid black;
+      display: grid; }
+      body .main .user_Input .form {
+        justify-self: center;
+        align-self: center;
+        width: auto;
+        height: auto; }
+    body .main .content_GIFS {
+      grid-area: content_GIFS;
+      border: 1px solid black; }
