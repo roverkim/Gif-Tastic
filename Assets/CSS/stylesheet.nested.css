@@ -2,6 +2,12 @@
   border: 1px solid silver;
   box-shadow: 2px 2px 4px gold; }
 
+html {
+  zoom: 0.9;
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9); }
+
 body {
   display: grid;
   grid-template-columns: 0.1px 1fr 0.1px;
@@ -106,6 +112,4 @@ body {
         body .main .user_Input .form .name {
           margin: 10px; }
         body .main .user_Input .form .submit {
-          margin: 10px; }
-      body .main .content_GIFS {
-        overflow: scroll; } }
+          margin: 10px; } }

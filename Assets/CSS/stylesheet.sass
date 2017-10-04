@@ -31,6 +31,13 @@
   box-shadow: 2px 2px 4px gold
 
 
+html
+  zoom: 0.9
+  -moz-transform: scale(0.9)
+  -webkit-transform: scale(0.9)
+  transform: scale(0.9)
+
+
 // Body Area
 body
   display: grid
@@ -42,6 +49,7 @@ body
   background: url("../Images/background1.gif")
   background-repeat: no-repeat
   background-size: cover
+
   // Main area
   .main
     grid-area: main
@@ -135,5 +143,3 @@ body
             margin: 10px
           .submit
             margin: 10px
-      .content_GIFS
-        overflow: scroll

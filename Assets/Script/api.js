@@ -58,7 +58,7 @@ function display(){
             // Devlare variable celebrityImage to store IMG tag along with image source
             var celebrityImage = $("<img>").attr("src", response.data[i].images.fixed_height.url);
             // Style the image tag
-            celebrityImage.css({"margin": "0 auto", "padding-top": "5px"});
+            celebrityImage.css({"margin": "0 auto 5px auto", "padding-top": "5px"});
             // Add bootstrap image responsive class to make the image responsive
             celebrityImage.addClass("img img-responsive");
             //Add still and animate attributes that contains the url for still and moving images
