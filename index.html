@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <link rel="stylesheet" href="Assets/CSS/stylesheet.min.css">
     <!-- Scipts -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -15,22 +16,32 @@
   </head>
   <body>
     <main class = "main">
-        <div class="button_Row">
-          <!-- Container to center buttons-->
-          <div class="center_Button">
+      <!-- Header row -->
+      <header class = "header">
+        <p>Celebrity Gif Search</p>
+      </header>
+      <!-- Buttons Row -->
+      <div class="button_Row">
+        <!-- Container to center buttons-->
+        <div class="center_Button">
 
-          </div>
         </div>
-        <div class="user_Input">
-          <form class = "form">
-            Add Your Celebrity Button: <input type="text" name="celebrityName" class = "name">
-            <input class = "btn btn-primary submit"  value="Submit" >
-          </form>
-        </div>
-        <content class = "content_GIFS row">
+      </div>
+      <!-- User Input Row -->
+      <div class="user_Input">
+        <form class = "form">
+          <span class = "p">Add Your Celebrity Button:<span><input type="text" style = "color:black;" name="celebrityName" class = "name">
+          <input class = "btn btn-primary submit" value="Submit" >
+        </form>
+      </div>
+      <!-- Gif Row Title -->
+      <div class="gif_Header">
+        <p>Click on the image to stop Gif Motion</p>
+      </div>
+      <!-- Gif will be populated here -->
+      <content class = "content_GIFS row">
 
-        </content>
-
+      </content>
     </main>
   </body>
 </html>

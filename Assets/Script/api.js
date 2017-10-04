@@ -20,8 +20,9 @@ function buttons(){
       button.attr('data-name', celebrityArray[index]);
       // Add's Text to the button
       button.text(celebrityArray[index]);
-      // Add CSS to spread buttons out
-      button.css("margin", "10px")
+      // Add CSS to spread buttons out and a random background-color to each button
+      var color = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+      button.css({"margin": "10px", "background-color": color, "mix-blend-mode": "difference", " text-shadow" : "2px 2px 4px black"});
       // Add the buttons to center_Button Row
       $(".center_Button").append(button);
     };
@@ -33,6 +34,8 @@ function buttons(){
 // Function for Displaying gifs
 function display(){
     console.log("Display Function is being called");
+    // Clear previous displayed images
+    $(".content_GIFS").empty();
     // Declare celebrity variable to store attribute "data-name" from the button that is being clicked
     var celebrity = $(this).attr("data-name");
     // Declare a url that concatenates a string with the celebrity name and api key that limits 10 results
@@ -43,13 +46,13 @@ function display(){
         // Use for loop to create 10 pictures based on the length of the array in the response object. 10 results.
         for (var i = 0; i < response.data.length; i++) {
             // Declare celebrityDiv variable to store div element and assign bootstrap class
-            var celebrityDiv = $("<div>").addClass("col-xs-3 celeb_Border");
-            // CSS to Spread out the images
-            celebrityDiv.css("margin-top", "25px");
+            var celebrityDiv = $("<div>").addClass("col-xs-12 col-sm-6 col-md-4 col-lg-3 celeb_Border");
+            // CSS to Spread out the images and Change text color
+            celebrityDiv.css({"margin-top": "25px", "color": "white"});
             // Declare p variable and assign p tage to it.
             var p = $("<p>");
             // Center the p tag
-            p.css("text-align", "center");
+            p.css({"text-align": "center", "text-shadow" : "2px 2px 4px black", "padding": "5px"});
             // Add text and rating from response
             p.text("Rating: " + response.data[i].rating);
             // Devlare variable celebrityImage to store IMG tag along with image source
