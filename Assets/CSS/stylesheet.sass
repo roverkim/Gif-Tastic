@@ -30,12 +30,13 @@
   border: 1px solid silver
   box-shadow: 2px 2px 4px gold
 
+// Setting default zoom
 
 html
-  zoom: 0.9
-  -moz-transform: scale(0.9)
-  -webkit-transform: scale(0.9)
-  transform: scale(0.9)
+  zoom: 0.95
+  -moz-transform: scale(0.95)
+  -webkit-transform: scale(0.95)
+  transform: scale(0.95)
 
 
 // Body Area
@@ -124,9 +125,17 @@ body
     .content_GIFS
       grid-area: content_GIFS
       border: 2px solid orange
+      overflow: scroll
 
 
 @media only screen and (max-width: 740px)
+
+  html
+    zoom: 100%
+    -moz-transform: scale(1)
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
   body
     display: grid
     @include grid($columns: 1fr, $rows: 0.1px 1fr 0.1px , $area: ". " "main" ".")

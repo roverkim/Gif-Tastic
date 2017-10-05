@@ -3,10 +3,10 @@
   box-shadow: 2px 2px 4px gold; }
 
 html {
-  zoom: 0.9;
-  -moz-transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  transform: scale(0.9); }
+  zoom: 0.95;
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95); }
 
 body {
   display: grid;
@@ -92,9 +92,15 @@ body {
         font-size: 2vh; }
     body .main .content_GIFS {
       grid-area: content_GIFS;
-      border: 2px solid orange; }
+      border: 2px solid orange;
+      overflow: scroll; }
 
 @media only screen and (max-width: 740px) {
+  html {
+    zoom: 100%;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
   body {
     display: grid;
     grid-template-columns: 1fr;
